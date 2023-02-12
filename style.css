@@ -7,8 +7,8 @@
   --clr-secondary-400: hsl(240, 2%, 19%);
   --clr-secondary-600: hsl(204, 28%, 14%);
 
-  --clr-light: hsl(0, 0%, 100%);
-  --clr-highlight: hsl(43, 48%, 58%);
+  --clr-light: hsl(0, 0%, 85%);
+  --clr-highlight: hsl(47, 100%, 50%);
   --clr-transparent: rgba(0, 0, 0, 0.1);
 }
 
@@ -74,12 +74,19 @@ h6 {
   font-size: 1rem;
   font-family: "Cascadia Code", "JetBrains Mono", "Courier New", Courier,
     monospace;
-  line-height: 1.15rem;
+  font-family: monospace;
+  line-height: 1.5rem;
+  padding: 0 0.5em;
 
   background: none;
   border: none;
   outline: none;
   resize: none;
+}
+
+.editor__input:focus-visible {
+  color: var(--clr-light);
+  font-weight: 300;
 }
 
 /* =============
@@ -135,6 +142,7 @@ main {
   display: grid;
   grid-template-columns: auto 1fr;
   padding: 0.5rem;
+  border: 2.25px solid var(--clr-transparent);
 }
 
 .settings {
@@ -167,12 +175,12 @@ main {
 }
 
 .button--dirty::after {
-  position: solute;
+  position: absolute;
   top: 5px;
   left: 5px;
   width: calc(100% - 10px);
   content: "";
-  border-block-start: 3px solid var(--clr-highlight);
+  border-block-start: 2px solid var(--clr-highlight);
 }
 
 /* =============
