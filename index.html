@@ -9,81 +9,83 @@
   </head>
 
   <body>
-    <header>
-      <div class="">
-        <h1 class="pen-title">CodePen Clone</h1>
-        <h1 class="pen-user"></h1>
+    <header class="page__header">
+      <div class="pen__details">
+        <h1 class="pen__title">CodePen Clone</h1>
+        <p class="pen__author">bachiito</p>
       </div>
 
-      <div class="header-btn-group">
-        <button class="save">☁ Save</button>
-        <button class="save-private">☁ Save as Private</button>
-        <button class="settings">🍥 Settings</button>
-        <button class="view">👀 Change View</button>
-        <img src="" alt="user profile photo" class="user-img" />
-      </div>
+      <button class="button button--dirty">☁ Save</button>
+      <button class="button">☁ Save as Private</button>
+      <button class="button">⚙ Settings</button>
+      <button class="button">👀 Change View</button>
+      <img src="assets/profile.jpg" alt="user profile photo" class="avatar" />
     </header>
 
-    <main class="main-layout">
-      <section class="code-section">
+    <main>
+      <section class="code">
         <div class="editor">
-          <div class="editor__header flex-group">
-            <button class="editor__button"></button>
-            <p class="editor__language"></p>
-            <button class="editor__button"></button>
+          <header class="editor__header">
+            <button class="button button--small editor__settings">⚙</button>
+            <p class="editor__language">HTML</p>
+            <button class="button button--small editor__settings">⌄</button>
+          </header>
+          <div class="editor__code">
+            <div class="editor__gutter">
+              <span class="editor__number">1</span>
+            </div>
+            <textarea name="HTML" id="HTML" class="editor__input">
+              <p>Hello World!</p>
+            </textarea>
           </div>
-          <div class="editor__body"></div>
         </div>
 
         <div class="editor">
-          <div class="editor__header flex-group">
-            <button class="editor__button"></button>
-            <p class="editor__language"></p>
-            <button class="editor__button"></button>
+          <header class="editor__header">
+            <button class="button button--small editor__settings">⚙</button>
+            <p class="editor__language">CSS</p>
+            <button class="button button--small editor__settings">⌄</button>
+          </header>
+          <div class="editor__code">
+            <div class="editor__gutter">
+              <span class="editor__number">1</span>
+              <span class="editor__number">2</span>
+              <span class="editor__number">3</span>
+            </div>
+            <textarea name="CSS" id="CSS" class="editor__input">
+              body { 
+                margin : 0;
+              }
+            </textarea>
           </div>
-          <div class="editor__body"></div>
         </div>
 
         <div class="editor">
-          <div class="editor__header flex-group">
-            <button class="editor__button"></button>
-            <p class="editor__language"></p>
-            <button class="editor__button"></button>
+          <header class="editor__header">
+            <button class="button button--small editor__settings">⚙</button>
+            <p class="editor__language">JS</p>
+            <button class="button button--small editor__settings">⌄</button>
+          </header>
+          <div class="editor__code">
+            <div class="editor__gutter">
+              <span class="editor__number">1</span>
+            </div>
+            <textarea name="JS" id="JS" class="editor__input">
+              const pi = 3.141592;
+            </textarea>
           </div>
-          <div class="editor__body"></div>
         </div>
       </section>
 
-      <section class="css-section">
-        <div class="css__header flex-group">
-          <button class="hamburger"></button>
-          <p class="asterisk"></p>
-          <h2 class="css-title">css-tricks</h2>
-          <form action="/" id="css-search">
-            <input
-              type="text"
-              name="search"
-              id="search"
-              class="search"
-              placeholder="flexbox"
-            />
-            <button class="form-submit-magnify"></button>
-          </form>
-        </div>
-
-        <div class="css__body">
-          <article class="css__post"></article>
-          <aside class="css__sidebar"></aside>
-        </div>
+      <section class="preview">
+        <iframe src="https://css-tricks.com" frameborder="0"></iframe>
       </section>
     </main>
 
-    <footer>
-      <div class="footer-button-gruop">
-        <button class="console"></button>
-        <button class="Assets"></button>
-        <button class="x"></button>
-      </div>
+    <footer class="settings">
+      <button class="button button--small">console</button>
+      <button class="button button--small">assets</button>
+      <button class="button button--small">⌘</button>
     </footer>
   </body>
 </html>
