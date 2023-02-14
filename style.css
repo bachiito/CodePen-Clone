@@ -82,6 +82,7 @@ h6 {
   border: none;
   outline: none;
   resize: none;
+  overflow-y: scroll;
 }
 
 .editor__input:focus-visible {
@@ -128,12 +129,14 @@ main.vertical-layout {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   background-color: var(--clr-secondary-600);
+  max-height: 50vh;
 }
 
 .code.sidebar {
   /* View changed */
   grid-template-columns: 1fr;
   gap: 0;
+  max-height: 100%;
 }
 
 .editor {
