@@ -6,6 +6,7 @@
   --clr-secondary-200: hsl(180, 1%, 32%);
   --clr-secondary-400: hsl(240, 2%, 19%);
   --clr-secondary-600: hsl(204, 28%, 14%);
+  --clr-secondary-700: hsl(203, 28%, 13%);
 
   --clr-light: hsl(0, 0%, 85%);
   --clr-highlight: hsl(47, 100%, 50%);
@@ -40,11 +41,6 @@ img {
   max-width: 100%;
 }
 
-iframe {
-  height: 100%;
-  width: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -65,10 +61,6 @@ h6 {
   margin: 0;
 }
 
-.editor__number {
-  display: block;
-}
-
 .editor__input {
   color: var(--clr-secondary-200);
   font-size: 1rem;
@@ -76,13 +68,14 @@ h6 {
     monospace;
   font-family: monospace;
   line-height: 1.5rem;
-  padding: 0 0.5em;
 
+  height: 100%;
+  width: 100%;
+  padding: 0.5em;
   background: none;
   border: none;
   outline: none;
   resize: none;
-  overflow-y: scroll;
 }
 
 .editor__input:focus-visible {
@@ -99,6 +92,7 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100dvh;
   min-height: 100vh;
+  background-color: var(--clr-light);
 
   color: var(--clr-light);
 }
@@ -129,14 +123,12 @@ main.vertical-layout {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   background-color: var(--clr-secondary-600);
-  max-height: 50vh;
 }
 
 .code.sidebar {
   /* View changed */
   grid-template-columns: 1fr;
   gap: 0;
-  max-height: 100%;
 }
 
 .editor {
@@ -154,9 +146,6 @@ main.vertical-layout {
 }
 
 .editor__code {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  padding: 0.5rem;
   border: 2.25px solid var(--clr-transparent);
 }
 
@@ -204,4 +193,29 @@ main.vertical-layout {
 
 .avatar {
   width: 2.75rem;
+}
+
+/* =============
+  SCROLL BAR
+============== */
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2rem;
+  background-color: var(--clr-transparent);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--clr-secondary-700);
+  border-radius: 2rem;
+  background-color: var(--clr-secondary-400);
+}
+
+@supports (scrollbar-color: var(--clr-secondary-700) var(--clr-secondary-400)) {
+  * {
+    scrollbar-color: var(--clr-secondary-700) var(--clr-secondary-400);
+  }
 }
